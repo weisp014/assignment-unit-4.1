@@ -76,8 +76,18 @@ console.log( 'getLast test:', getLast(colors) );  //purple is last in array
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  
+  for ( element of array ){
+    
+    if (element === value){
+      return true;
+    } //return ture if match found
+  }
+    return false; //if no match it will get to this code and return false
 }
+let animals = ['lions','tigers','bears'];
+console.log( 'find test:', find('tigers', animals)); //should return true
+console.log( 'find test:', find('pandas', animals)); //should return false
+
 
 // ----------------------
 // Stretch Goals
