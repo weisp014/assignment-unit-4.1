@@ -22,10 +22,12 @@ function helloName( name ) {
 console.log('Test - personalized hello:', helloName('Ryan'));
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
+function addNumbers( firstNumber, secondNumber ) {
+  let answer = firstNumber + secondNumber;
+  return answer;
   // return firstNumber + secondNumber;
 }
-
+console.log('Test - should add firstNumber & secondNumber:', addNumbers(8,4));
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree( ){
