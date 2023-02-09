@@ -140,3 +140,20 @@ console.log('allPositive test:', allPositive(onlyNegative)); //should return emp
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+//Create a function that will return an integer number corresponding to the amount of digits in the given integer num.
+function numberOfDigits( integer ){ //only works for positive integers
+  let nod = 0;
+  while( integer >= 10 ){
+    integer /= 10;  //divide integer by 10
+    nod++;
+  }
+  if ( integer >= 0){  //adding this to make sure the last digit is counted
+    nod++;
+  }
+  return nod;
+}
+console.log('numberOfDigits test:', numberOfDigits(123));
+console.log('numberOfDigits test:', numberOfDigits(40));
+console.log('numberOfDigits test:', numberOfDigits(8));
+console.log('numberOfDigits test:', numberOfDigits(88888));
+console.log('numberOfDigits test:', numberOfDigits(0));
